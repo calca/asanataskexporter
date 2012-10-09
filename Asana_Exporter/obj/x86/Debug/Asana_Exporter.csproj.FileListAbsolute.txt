@@ -5,10 +5,13 @@ c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\ResolveAssemblyReference.cache
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.exe
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.pdb
-C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.exe
-C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.pdb
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.csprojResolveAssemblyReference.cache
 C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Asana_Exporter.exe.config
 C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Asana_Exporter.exe
 C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Asana_Exporter.pdb
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Asana_Exporter_Lib.dll
 C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Asana_Exporter_Lib.pdb
 C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.exe
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.pdb
