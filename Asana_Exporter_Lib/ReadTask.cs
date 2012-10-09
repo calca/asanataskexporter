@@ -19,7 +19,7 @@ namespace Asana_Exporter_Lib
             ApiKey = apiKey;
         }
 
-        public bool CreateCVS(string projectRequest = "")
+        public bool CreateCVS(FileInfo file, string projectRequest = "")
         {
 
             //array for the CSV data (well, actually tab seperated)
@@ -112,9 +112,7 @@ namespace Asana_Exporter_Lib
                 //convert list to array
                 string[] CSVresults = CSVdata.ToArray();
                 //save results
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string fileName = path + "\\asana_export.csv";
-                File.WriteAllLines(fileName, CSVresults);
+                File.WriteAllLines(file.ToString(), CSVresults);
             }
             catch (Exception err)
             {

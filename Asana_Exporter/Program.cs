@@ -27,7 +27,14 @@ namespace Asana_Exporter
             }
 
             var read = new ReadTasks(apiKey);
-            if (read.CreateCVS(args[0]))
+
+            var name = "asana_export" + DateTime.Now.ToString("yyyyMMdd") + ".csv";
+            string fileName = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                name);
+            FileInfo file = new FileInfo(fileName);
+
+            if (read.CreateCVS(file,args[0]))
             {
                 Console.WriteLine("Export complete.");
                 return 1; 
