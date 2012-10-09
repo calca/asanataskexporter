@@ -5,3 +5,5 @@ c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\ResolveAssemblyReference.cache
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.exe
 c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.pdb
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.exe
+C:\Users\Gianluigi\Documents\GitHub\asanataskexporter\Asana_Exporter\obj\x86\Debug\Asana_Exporter.pdb
