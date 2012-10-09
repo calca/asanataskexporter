@@ -1,3 +1,3 @@
 == Asana Exporter ==
 
-Asana Task Manager http:\\www.asana.com
+Asana Task Manager http://asana.com
