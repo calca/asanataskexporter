@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace Asana_Exporter
 {
@@ -48,10 +49,17 @@ namespace Asana_Exporter
 
         static int Main(string[] args)
         {
-            if (args.Length == 0)
+            var apiKey = ConfigurationManager.AppSettings["apiKey"];
+            var projectRequest = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(apiKey))
             {
-                Console.WriteLine("You must enter your API key as an argument when running this program.");
+                Console.WriteLine("You must enter your API key in the App.config");
                 return 1; 
+            }
+            if (!string.IsNullOrWhiteSpace(args[0]))
+            {
+                projectRequest = args[0];
             }
 
             //array for the CSV data (well, actually tab seperated)
@@ -73,8 +81,17 @@ namespace Asana_Exporter
                 //convert JSON
                 var convertedresponse = JsonConvert.DeserializeObject<AsanaProjectList>(response);
 
+
+                var prjs = convertedresponse.data;
+                if (!string.IsNullOrWhiteSpace(projectRequest))
+                {
+                    prjs = prjs
+                        .Where(x => { return x.name.CompareTo(projectRequest) == 0; })
+                        .ToList();
+                }
+
                 //for each project returned, call API again to get tasks
-                foreach (Project project in convertedresponse.data)
+                foreach (Project project in prjs)
                 {
                     string projectName = project.name;
                     string projectTasksURL = "https://app.asana.com/api/1.0/projects/" + project.id + "/tasks/?opt_fields=name,notes,due_on,completed,completed_at,assignee,assignee.name";
