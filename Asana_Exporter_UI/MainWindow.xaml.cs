@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Asana_Exporter_Lib.Model;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,10 @@ namespace Asana_Exporter_UI
         public MainWindow()
         {
             InitializeComponent();
+            var apiKey = ConfigurationManager.AppSettings["apiKey"];
+            var query = new Query(apiKey);
+            listProjects.DataContext = query.GetProjects().data;
         }
+
     }
 }

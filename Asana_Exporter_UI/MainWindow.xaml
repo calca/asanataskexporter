@@ -1,8 +1,9 @@
-﻿<Window x:Class="Asana_Exporter_UI.MainWindow"
+﻿<Window x:Name="Metro_Asana" x:Class="Asana_Exporter_UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="525" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <ListBox HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="180" Name="listProjects" ItemsSource="{Binding}"/>
 </Window>

@@ -10,6 +10,11 @@ namespace Asana_Exporter_Lib.Model
     {
         public object id { get; set; }
         public string name { get; set; }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 
 }
