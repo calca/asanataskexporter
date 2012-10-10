@@ -1,7 +1,0 @@
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\bin\Release\Asana_Exporter.exe
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\bin\Release\Asana_Exporter.pdb
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\bin\Release\Newtonsoft.Json.dll
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\bin\Release\Newtonsoft.Json.xml
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Release\ResolveAssemblyReference.cache
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Release\Asana_Exporter.exe
-c:\users\ed\documents\visual studio 2010\Projects\Asana_Exporter\Asana_Exporter\obj\x86\Release\Asana_Exporter.pdb
