@@ -24,23 +24,11 @@ namespace Asana_Exporter_Lib
 
             //array for the CSV data (well, actually tab seperated)
             List<string> CSVdata = new List<string>();
-
-            //get API key and encode it
-            string convertedAPI = EncodeTo64(ApiKey + ":");
-            string headerAPIkey = "Basic " + convertedAPI;
-            string allProjectsURL = "https://app.asana.com/api/1.0/projects/";
+            var query = new Query(ApiKey);
 
             try
             {
-                //open up new webclient and add headers
-                var client = new WebClient();
-                client.Encoding = System.Text.Encoding.UTF8;
-                client.Headers.Add("Authorization", headerAPIkey);
-                //call API
-                var response = client.DownloadString(new Uri(allProjectsURL));
-                //convert JSON
-                var convertedresponse = JsonConvert.DeserializeObject<AsanaProjectList>(response);
-
+                var convertedresponse = query.GetProjects();
 
                 var prjs = convertedresponse.data;
                 if (!string.IsNullOrWhiteSpace(projectRequest))
@@ -54,9 +42,7 @@ namespace Asana_Exporter_Lib
                 foreach (Project project in prjs)
                 {
                     string projectName = project.name;
-                    string projectTasksURL = "https://app.asana.com/api/1.0/projects/" + project.id + "/tasks/?opt_fields=name,notes,due_on,completed,completed_at,assignee,assignee.name";
-                    var taskresponse = client.DownloadString(new Uri(projectTasksURL));
-                    var convertedtasks = JsonConvert.DeserializeObject<AsanaTaskList>(taskresponse);
+                    var convertedtasks = query.GetTasks(project);
                     //now take everything in there and turn it into a line of CSV text
                     foreach (Asana_Exporter_Lib.Model.Task task in convertedtasks.data)
                     {
@@ -120,16 +106,6 @@ namespace Asana_Exporter_Lib
             }
 
             return true;
-        }
-
-        //for encoding the API kay
-        static public string EncodeTo64(string toEncode)
-        {
-            byte[] toEncodeAsBytes
-                  = System.Text.ASCIIEncoding.ASCII.GetBytes(toEncode);
-            string returnValue
-                  = System.Convert.ToBase64String(toEncodeAsBytes);
-            return returnValue;
         }
     }
 }

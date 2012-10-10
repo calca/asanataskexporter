@@ -45,6 +45,7 @@
     <Compile Include="Model\Assignee.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\ProjectList.cs" />
+    <Compile Include="Model\Query.cs" />
     <Compile Include="Model\Task.cs" />
     <Compile Include="Model\TaskList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
