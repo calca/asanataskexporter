@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Net;
-using Newtonsoft.Json;
 using System.Configuration;
 using Asana_Exporter_Lib.Model;
 using Asana_Exporter_Lib;
