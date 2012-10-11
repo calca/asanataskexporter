@@ -22,12 +22,23 @@ namespace Asana_Exporter_UI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private Query Query { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            
             var apiKey = ConfigurationManager.AppSettings["apiKey"];
-            var query = new Query(apiKey);
-            listProjects.DataContext = query.GetProjects().data;
+            Query = new Query(apiKey);
+
+            listProjects.DataContext = Query.GetProjects().data;
+        }
+
+        private void listProjects_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var item = (Project)listProjects.SelectedItem;
+            listTask.DataContext = Query.GetTasks(item).data;
         }
 
     }

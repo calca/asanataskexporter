@@ -15,5 +15,10 @@ namespace Asana_Exporter_Lib.Model
         public string completed_at { get; set; }
         public string notes { get; set; }
         public object due_on { get; set; }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }
